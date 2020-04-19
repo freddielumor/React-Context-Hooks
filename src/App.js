@@ -1,7 +1,7 @@
 import React from "react";
 import BookList from "./components/BookList";
 import Navbar from "./components/Navbar";
-import BookContextProvider from "./Context/BookContext";
+import BookContextProvider from "./context/BookContext";
 import NewBookForm from "./components/BookForm";
 
 function App() {
