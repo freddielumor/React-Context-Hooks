@@ -3,8 +3,8 @@ import BookList from "./components/BookList";
 import Navbar from "./components/Navbar";
 import ThemeContextProvider from "./Context/ThemeContext";
 import AuthContextProvider from "./Context/AuthContext";
+import BookContextProvider from "./Context/BookContext";
 import ThemeToggle from "./components/ThemeToggle";
-import SongList from "./components/SongList";
 
 function App() {
   return (
@@ -12,11 +12,12 @@ function App() {
       <ThemeContextProvider>
         <AuthContextProvider>
           <Navbar />
-          <BookList />
+          <BookContextProvider>
+            <BookList />
+          </BookContextProvider>
           <ThemeToggle />
         </AuthContextProvider>
       </ThemeContextProvider>
-      {/* <SongList /> */}
     </div>
   );
 }
